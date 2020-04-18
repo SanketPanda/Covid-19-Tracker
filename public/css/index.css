@@ -54,7 +54,7 @@ p
 .container .box
 {
     position: relative;
-    width: 50%;
+    width: 10%;
     height: 12rem;
     background-color: white;
     float: middle;
@@ -77,19 +77,34 @@ p
     width: 600px;
     height: 250px;
 }
-.category {
-    margin: auto auto;
+
+.choose-category
+{
+  display: flex;
+  float: middle;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+
+.category , .chartCategory {
+  padding-left: 0px;
+    padding-right: 0px;
+    display: inline;
+    margin: auto;
+    left: 50px;
+  }
+  
+  .select-box , .chartCategory .select-box {
+    margin: auto;
+    width: 300px;
+    float: middle;
     position: relative;
+    
   }
   
-  .select-box {
-    display: flex;
-    width: 400px;
-    flex-direction: column;
-    margin: auto auto;
-  }
-  
-  .select-box .options-container {
+  .select-box .options-container ,.chartCategory .select-box .chart-options-container {
     background: #2f3640;
     color: #f5f6fa;
     max-height: 0;
@@ -98,7 +113,6 @@ p
     transition: all 0.4s;
     border-radius: 8px;
     overflow: hidden;
-  
     order: 1;
   }
   
@@ -108,7 +122,6 @@ p
     margin-bottom: 8px;
     color: #f5f6fa;
     position: relative;
-  
     order: 0;
   }
   
@@ -127,24 +140,24 @@ p
   {
       float: right;
   }
-  .select-box .options-container.active {
+  .select-box .options-container.active , .select-box .chart-options-container.active{
     max-height: 240px;
     opacity: 1;
     overflow-y: scroll;
   }
   
-  .select-box .options-container.active + .selected::after {
+  .select-box .options-container.active + .selected::after , .select-box .chart-options-container.active+ .selected::after {
     transform: rotateX(180deg);
     top: -6px;
   }
   
-  .select-box .options-container::-webkit-scrollbar {
+  .select-box .options-container::-webkit-scrollbar , .select-box .chart-options-container::-webkit-scrollbar{
     width: 8px;
     background: #0d141f;
     border-radius: 0 8px 8px 0;
   }
   
-  .select-box .options-container::-webkit-scrollbar-thumb {
+  .select-box .options-container::-webkit-scrollbar-thumb , .select-box .chart-options-container::-webkit-scrollbar-thumb{
     background: #525861;
     border-radius: 0 8px 8px 0;
   }
@@ -184,6 +197,10 @@ p
 
 @media (max-width:992px)
 {
+  .container .box
+  {
+    height: 15rem;
+  }
     .container .box
     {
         left: 100px;
@@ -191,7 +208,10 @@ p
     .category
     {
         margin: 0;
-        left: 10%;
+    }
+    .select-box
+    {
+      width: 230px;
     }
     #myChart
 {
@@ -202,6 +222,10 @@ p
 
 @media (max-width:578px)
 {
+  .container .box
+  {
+    height: 15rem;
+  }
   .container
   {
     margin: auto auto;
@@ -214,7 +238,21 @@ p
     .category
     {
         margin: 0;
-        left: 10%;
-        width: 10%;
+       
     }
+    .select-box , .chartCategory .select-box
+    {
+      width: 150px;
+    }
+
+    .container .barChart
+    {
+      width: 80%;
+    }
+    .choose-category
+{
+  display: flex;
+  float: middle;
+  margin: auto auto;
+}
 }
