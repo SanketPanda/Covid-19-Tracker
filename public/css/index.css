@@ -197,6 +197,11 @@ p
 
 @media (max-width:992px)
 {
+  .covid-icon
+{
+    width: 15%;
+    margin-bottom: 20px;
+}
   .container .box
   {
     height: 15rem;
@@ -222,6 +227,11 @@ p
 
 @media (max-width:578px)
 {
+  .covid-icon
+  {
+      width: 15%;
+      margin-bottom: 20px;
+  }
   .container .box
   {
     height: 15rem;
