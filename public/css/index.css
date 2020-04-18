@@ -78,15 +78,15 @@ p
     height: 250px;
 }
 .category {
-    margin: 50px auto;
+    margin: auto auto;
     position: relative;
-    left: 20%;
   }
   
   .select-box {
     display: flex;
     width: 400px;
     flex-direction: column;
+    margin: auto auto;
   }
   
   .select-box .options-container {
@@ -198,4 +198,23 @@ p
     width: 1000px;
     height: 500px;
 }
+}
+
+@media (max-width:578px)
+{
+  .container
+  {
+    margin: auto auto;
+  }
+  .container .box
+    {
+        left: 15px;
+        width: 40%;
+    }
+    .category
+    {
+        margin: 0;
+        left: 10%;
+        width: 10%;
+    }
 }
